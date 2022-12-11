@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>アニメ/マンガ - Accueil</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    {{>header}}
+
+    <div class="mainContainer">
+
+        <div class="topAnime">
+            <h1 id="h1Title">TOP ANIMES :</h1>
+            {{#anime}}
+            <div class="container">
+                <a id="card" class="card" href="/anime/{{title}}">{{title}}
+                    <img id="imgList" src="{{image_url}}" alt="animesImage"
+                        onerror="this.src = '/images/imgNotFound.png';">
+                </a>
+            </div>
+            {{/anime}}
+        </div>
+        <hr>
+        <div class="topManga">
+            <h1 id="h1Title">TOP MANGAS :</h1>
+            {{#manga}}
+            <div class="container">
+                <a id="card" class="card" href="/manga/{{title}}">{{title}}
+                    <img id="imgList" src="{{image_url}}" alt="mangasImage"
+                        onerror="this.src = '/images/imgNotFound.png';">
+                </a>
+            </div>
+            {{/manga}}
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>アニメ/マンガ - Search-List</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    {{>header}}
+
+    <h1 id="h1Title">Manga : {{num_found_Manga}} mangas trouvées {{#page}} (page {{page}}/{{num_pages_Manga}}) {{/page}}
+    </h1>
+
+    {{#results}}
+    <div class="container">
+        <a id="card" class="card" href="/manga/{{title}}">{{title}}
+            <img id="imgList" src="{{image_url}}" alt="mangasImage">
+        </a>
+    </div>
+    {{/results}}
+
+    <h1 id="h1Title">Anime : {{num_found_Anime}} animes trouvées {{#page}} (page {{page}}/{{num_pages_Anime}}) {{/page}}
+    </h1>
+
+    {{#results2}}
+    <div class="container">
+        <a id="card" class="card" href="/anime/{{title}}">{{title}}
+            <img id="imgList" src="{{image_url}}" alt="animesImage">
+        </a>
+    </div>
+    {{/results2}}
+
+    <div class="button">
+        {{#previous_page}}
+        <a id="prevButton" href="/search?search={{search}}&page={{previous_page}}">Page Précédente</a>
+        {{/previous_page}}
+
+        {{#next_page}}
+        <a class="nextButton" href="/search?search={{search}}&page={{next_page}}">Page suivante</a>
+        {{/next_page}}
+    </div>
+</body>
+
+</html>

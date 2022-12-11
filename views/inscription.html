@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>アニメ/マンガ - Inscription</title>
+    <link rel="stylesheet" href="css/registration.css">
+</head>
+
+<body>
+    <div class="registerContainer">
+        <h2>Inscription</h2>
+        <form action="/inscription" method="post">
+            <div class="inputBox">
+                <input type="text" minlength="1" id="username" name="username" placeholder="Nom d'utilisateur" required>
+            </div>
+            <div class="check">
+                <h3>{{check}}</h3>
+            </div>
+            <div class="inputBox">
+                <input type="password" minlength="1" id="password" name="password" placeholder="Mot de passe" required>
+            </div>
+            <div class="inputBox button">
+                <input type="Submit" value="S'inscrire maintenant">
+            </div>
+            <div class="text">
+                <h3>Vous possédez déjà un compte ? <a href="/connection">Connectez-vous</a></h3>
+            </div>
+        </form>
+        <form action="/">
+            <div class="inputBox Closebutton">
+                <input class="inputBox Closebutton" type="submit" value="Annuler">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

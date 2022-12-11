@@ -1,0 +1,20 @@
+<header>
+    <a href="/"><h2 class="title">アニメ/マンガ</h2></a>
+    <form action="/search" method="get">
+        <nav>
+            <ul class="nav_main">
+                <li><a href="/animes">Anime</a></li>
+                <li><a href="/mangas">Manga</a></li>
+                <div class="dropdown">
+                    <li><a><img id="avatar" src="/images/{{userAvatar}}.jpg" alt="Avatar" class="avatar"
+                                onerror="this.src = '/images/imgNotFound.png';"></a></li>
+                    <div class="dropdown-content">
+                        <a href="/user/{{username}}">Profile</a>
+                        <a href="/logout">Se deconnecter ({{username}})</a>
+                    </div>
+                </div>
+                <input class="searchBar" type="text" name="search" placeholder="Search...">
+            </ul>
+        </nav>
+    </form>
+</header>

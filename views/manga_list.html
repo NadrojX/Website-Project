@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>アニメ/マンガ - Manga List</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    {{>header}}
+
+    <h1 id="h1Title">Liste de mangas : {{num_found_Manga}} mangas trouvées {{#page}} (page
+        {{page}}/{{num_pages_Manga}}){{/page}}</h1>
+
+    {{#results}}
+    <div class="container">
+        <a id="card" class="card" href="/manga/{{title}}">{{title}}
+            <img id="imgList" src="{{image_url}}" alt="mangasImage" onerror="this.src = '/images/imgNotFound.png';">
+        </a>
+    </div>
+    {{/results}}
+
+    <div class="buttons">
+        {{#previous_page}}
+        <a id="prevButton" href="/mangas?mangas&page={{previous_page}}">Page Précédente</a>
+        {{/previous_page}}
+
+        {{#next_page}}
+        <a id="nextButton" href="/mangas?mangas&page={{next_page}}">Page suivante</a>
+        {{/next_page}}
+    </div>
+
+    <a id="topButton" href="#">Top</a>
+    <script src="/javascript/top_button.js"></script>
+</body>
+
+</html>

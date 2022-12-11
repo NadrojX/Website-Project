@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>アニメ/マンガ - Anime List</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    {{>header}}
+
+    <h1 id="h1Title">Liste d'anime : {{num_found_Anime}} animé trouvées {{#page}} (page
+        {{page}}/{{num_pages_Anime}}){{/page}}</h1>
+
+    <div class="mainContainer">
+        {{#results}}
+        <div class="container">
+            <a id="card" class="card" href="/anime/{{title}}">{{title}}
+                <img id="imgList" src="{{image_url}}" alt="animesImage" onerror="this.src = '/images/imgNotFound.png';">
+            </a>
+        </div>
+        {{/results}}
+    </div>
+    <div class="buttons">
+        {{#previous_page}}
+        <a id="prevButton" href="/animes?animes&page={{previous_page}}">Page Précédente</a>
+        {{/previous_page}}
+
+        {{#next_page}}
+        <a id="nextButton" href="/animes?animes&page={{next_page}}">Page suivante</a>
+        {{/next_page}}
+    </div>
+
+    <a id="topButton" href="#">Top</a>
+    <script src="/javascript/top_button.js"></script>
+</body>
+
+</html>

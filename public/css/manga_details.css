@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+}
+
+.detailsContainer {
+    display: flex;
+    margin: 3.5% 6% 0 6%;
+    border-radius: 10px;
+    font-family: 'Trebuchet MS';
+    font-size: 22px;
+    height: auto;
+}
+
+.mainMangaDetails {
+    margin: 5px 5px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+iframe {
+    border: none;
+    width: 100%;
+    height: 750px;
+}
+
+#title {
+    text-decoration: underline;
+}
+
+.infoManga {
+    width: 98.5%;
+    text-align: left;
+    height: auto;
+    margin: 0 5px 5px 0;
+}
+
+.synopsisManga {
+    margin: 5px;
+}
+
+.sideInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 15%;
+    margin: 5px 5px 5px 5px;
+    border-radius: 10px;
+}
+
+.sideInfo hr {
+    width: 85%;
+    padding-top: 5px;
+    padding: 0;
+}
+
+#imgDetails {
+    width: 225px;
+    height: 320px;
+    border-radius: 10px;
+    margin: 1px;
+}
+
+.Ajouter-favoris,
+.Retirer-favoris {
+    padding: 1em 2em;
+    margin: auto;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+.Ajouter-favoris:hover {
+    background-color: #2EE59D;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+.Retirer-favoris:hover {
+    background-color: #e52e2e;
+    box-shadow: 0px 15px 20px rgba(229, 46, 46, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+/* #title_english {
+    text-align: center;
+    border: 1px solid white;
+} */
+
+/* #chapters {
+    border: 1px solid white;
+}
+
+/* #volumes {
+    border: 1px solid white;
+}
+
+/* #genres {
+    border: 1px solid white;
+}
+
+#status {
+    border: 1px solid white;
+}
+
+#authors {
+    border: 1px solid white;
+} */
+
+/* #scores {
+    border: 1px solid white;
+}
+
+#year {
+    border: 1px solid white;
+}
+
+#serializations {
+    border: 1px solid white;
+} */
+
+/* #synopsis {
+    border: 1px solid white;
+} */

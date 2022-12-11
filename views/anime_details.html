@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    {{#anime}}
+    <meta charset="UTF-8">
+    <title>アニメ/マンガ - Anime {{title}}</title>
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/anime_details.css" />
+</head>
+
+<body>
+
+    {{>header}}
+
+    <form action="/anime/{{title}}" method="post">
+        <div class="detailsContainer">
+
+            <aside class="sideInfo">
+                <div>
+                    <img id="imgDetails" src="{{image_url}}" onerror="this.src = '/images/imgNotFound.png';">
+                </div>
+                <hr>
+                <div>
+                    <div id="scores">
+                        <p>Score : {{score}}</p>
+                    </div>
+                    <div id="year">
+                        <p>Année de sortie : {{year}}</p>
+                    </div>
+                    <div id="studios">
+                        <p>Studio d'animation : {{studios}}</p>
+                    </div>
+                    <button class={{value2}} type="submit"> {{value2}} </button>
+                    <p style="margin: 15px 0 0 auto;">{{value}}</p>
+                </div>
+            </aside>
+
+            <main class="mainAnimeDetails">
+                <div id="title">
+                    <h1>{{title}}</h1>
+                    <p>Titre en anglais : {{title_english}}</p>
+                </div>
+
+                <article class="infoAnime">
+                    <div id="episodes">
+                        <p>Nombre d'épisodes : {{episodes}}</p>
+                    </div>
+                    <div id="duration">
+                        <p>Durée : {{duration}}</p>
+                    </div>
+                    <div id="status">
+                        <p>Statut : {{status}}</p>
+                    </div>
+                </article>
+
+                <article class="synopsisAnime">
+                    <div id="synopsis">
+                        <p>Synopsis : {{synopsis}}</p>
+                    </div>
+                </article>
+            </main>
+        </div>
+
+        <div id="trailer" class="trailerContainer"></div>
+
+        <script type="text/javascript">
+            let trailer = "{{trailer}}"
+            if (trailer !== "") {
+                window.onload = function loadTrailer() {
+                    document.getElementById('trailer').innerHTML = `<iframe src="{{trailer}}"> </iframe>`;
+                }
+            }
+        </script>
+    </form>
+    {{/anime}}
+</body>
+
+</html>

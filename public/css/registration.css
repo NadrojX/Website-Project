@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F7FBFC;
+    background-image: url(/images/Illustration12.jpg);
+}
+
+.registerContainer {
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    background: #fff;
+    padding: 34px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.registerContainer h2 {
+    position: relative;
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+}
+
+.registerContainer h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    border-radius: 10px;
+    background: darkred;
+}
+
+.registerContainer form .inputBox {
+    height: 52px;
+    margin: 18px 0 0 0;
+}
+
+form .inputBox input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #333;
+    border: 1.5px solid #C7BEBE;
+    border-bottom-width: 2.5px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.inputBox input:focus,
+.inputBox input:valid {
+    border-color: darkred;
+}
+
+form h3 {
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+form .text h3 {
+    color: #333;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+form .check {
+    color: rgb(255, 71, 71);
+    width: 100%;
+    margin-top: 15px;
+}
+
+form .text h3 a {
+    color: darkred;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.inputBox h3{
+    color: rgb(200, 75, 75);
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.inputBox.button input {
+    color: #fff;
+    letter-spacing: 1px;
+    border: none;
+    background: darkred;
+    cursor: pointer;
+}
+
+.inputBox.button input:hover {
+    background: rgb(100, 0, 0);
+}
+
+.inputBox.Closebutton input {
+    color: #fff;
+    letter-spacing: 1px;
+    border: none;
+    background: darkred;
+    cursor: pointer;
+    margin: 0;
+}
+
+.inputBox.Closebutton input:hover {
+    background: rgb(100, 0, 0);
+}

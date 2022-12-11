@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>アニメ/マンガ - Connexion</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <div class="loginContainer">
+        <h2>Connexion</h2>
+        <form action="/connection" method="post">
+            <div class="inputBox">
+                <input type="text" minlength="1" id="username" name="username" placeholder="Nom d'utilisateur" required>
+            </div>
+            <div class="inputBox">
+                <input type="password" minlength="1" id="password" name="password" placeholder="Mot de passe" required>
+            </div>
+            <div class="check">
+                <h3>{{check}}</h3>
+            </div>
+            <div class="inputBox button">
+                <input type="Submit" value="Connexion">
+            </div>
+            <div class="text">
+                <h3>Vous n'avez pas de compte ? <a href="/inscription">Inscrivez-vous</a></h3>
+            </div>
+        </form>
+        <form action="/">
+            <div class="inputBox Closebutton">
+                <input class="inputBox Closebutton" type="submit" value="Annuler">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

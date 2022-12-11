@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>アニメ/マンガ - User - {{username}}</title>
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/user_page.css" />
+</head>
+
+<body>
+
+    {{>header}}
+
+    <main class="mainContainer">
+        <h1 class="title">Bienvenue <span style="color: darkred;">{{username}}</span></h1>
+
+        <div class="userInfoContainer">
+            <div class="userAvatar">
+                <a href="/user/{{username}}/0"><img src="/images/Illustration14.jpg" alt="Img"
+                        onerror="this.src = '/images/imgNotFound.png';">
+                </a>
+                <a href="/user/{{username}}/1"><img src="/images/Illustration15.jpg" alt="Img"
+                        onerror="this.src = '/images/imgNotFound.png';">
+                </a>
+                <a href="/user/{{username}}/2"><img src="/images/Illustration17.jpg" alt="Img"
+                        onerror="this.src = '/images/imgNotFound.png';">
+                </a>
+            </div>
+        </div>
+
+        <div class="detailsContainer">
+            <details open>
+                <summary>Mangas Favoris List</summary>
+                <div class="details-content">
+                    {{#favManga}}
+                    <div class="container">
+                        <a id="card" class="card" href="/manga/{{title}}">{{title}}
+                            <img id="imgList" src="{{image_url}}" alt="mangasImage"
+                                onerror="this.src = '/images/imgNotFound.png';">
+                        </a>
+                        <div class="buttoncontainer">
+                            <form action="/user/{{username}}/mangaState/{{title}}" method="post">
+                                <button id={{state}}>{{state}}</button>
+                            </form>
+                            <form action="/user/{{username}}/manga/{{title}}" method="post">
+                                <button id="DeleteButton">Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                    {{/favManga}}
+                </div>
+            </details>
+            <hr />
+            <details open>
+                <summary>Animes Favoris List</summary>
+                <div class="details-content">
+                    {{#favAnime}}
+                    <div class="container">
+                        <a id="card" class="card" href="/anime/{{title}}">{{title}}
+                            <img id="imgList" src="{{image_url}}" alt="animesImage"
+                                onerror="this.src = '/images/imgNotFound.png';">
+                        </a>
+                        <div class="buttoncontainer">
+                            <form action="/user/{{username}}/animeState/{{title}}" method="post">
+                                <button id={{state}}>{{state}}</button>
+                            </form>
+                            <form action="/user/{{username}}/anime/{{title}}" method="post">
+                                <button id="DeleteButton">Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                    {{/favAnime}}
+                </div>
+            </details>
+        </div>
+    </main>
+    <a id="topButton" href="#">Top</a>
+    <script src="/javascript/top_button.js"></script>
+</body>
+
+</html>
